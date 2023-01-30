@@ -1,0 +1,16 @@
+html{
+    background-image: url("https://rare-gallery.com/resol/2560x1440/317865-Doom-Eternal-4K.jpg");
+}
+h2{
+    color: red;
+}
+.red_color{
+    color: red;
+}
+a{
+    color: red;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+}
