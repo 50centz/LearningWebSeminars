@@ -35,7 +35,7 @@
 
 
 // function name(name){
-    
+
 //     console.log(`Привет, ${name}`);
 // }
 // const userName = prompt('Введите ваше имя')
@@ -60,24 +60,80 @@
 
 
 // Задача 5: перепишите код, используя конструкцию switch-case, запрашивая продукт через диалоговое окно.
- 
-// <script>
-// let product = "Бананы";
- 
-// if (product == "Мандарины") {
-//   alert('Мандарины стоят 100 руб/кг.');
-// } else if (product == "Бананы") {
-//   alert('Бананы и груши стоят 70 руб/кг.');
-// } else if (product == "Груши") {
-//   alert('Бананы и груши стоят 70 руб/кг.');
-// } else {
-//   alert('Нет такого продукта.');
-// }
-// </script>
 
-// const product = "Бананы";
+{/* <script>
+let product = "Бананы";
+ 
+if (product == "Мандарины") {
+  alert('Мандарины стоят 100 руб/кг.')
+} else if (product == "Бананы") {
+  alert('Бананы и груши стоят 70 руб/кг.')
+} else if (product == "Груши") {
+  alert('Бананы и груши стоят 70 руб/кг.')
+} else {
+  alert('Нет такого продукта.')
+}
+</script> */}
 
-// switch(product){
-//     case 'Мандарины':
-//         alert
+// const product = prompt('Введите фрукт: ').toLowerCase();
+
+// switch (product) {
+//     case 'мандарины':
+//         alert("Мандарины стоят 100 руб/кг.");
+//         break
+//     case 'бананы':
+//     case 'груши':
+//         alert("Бананы и груши стоят 70 руб/кг.");
+//         break
+//     default:
+//         alert("Нет такого продукта.")           
 // }
+
+
+// Функция selectBanners принимает массив баннеров (объектов как в примере) и
+// число, обозначающее количество баннеров, которое нужно выбрать из массива.
+// Необходимо реализовать функцию так, чтобы функция выбирала переданное количество
+// случайных баннеров (баннеры уникальны, не должны повторяться в результате), 
+// учитывая их вес (свойство weight в объектах баннеров). Чем больший вес имеет 
+// баннер, тем больше шансов того что этот баннер должен быть выбран. 
+// Если массив баннеров содержит меньше или столько же элементов, сколько было
+// запрошено, то функция должна вернуть все элементы массива.
+
+
+function selectBanners(banners, count) {
+    let totalWeight = 0;
+    let newList = [];
+    for (const dict of banners) {
+        totalWeight += dict.weight;
+    }
+
+    while (newList.length < count) {
+        const randomNumber = Math.floor(Math.random() * totalWeight + 1);
+        let temp = 0;
+        for (const value of banners) {
+            temp += value.weight;
+            if (randomNumber < temp) {
+                if (newList.includes(value)) {
+                    break;
+                }
+                newList.push(value);
+                break;
+            }
+        }
+    }
+
+    return newList;
+
+}
+
+const banners = [
+    { id: 2, weight: 10 },
+    { id: 4, weight: 5 },
+    { id: 8, weight: 15 },
+    { id: 22, weight: 18 },
+    { id: 41, weight: 41 },
+    { id: 53, weight: 1 },
+    { id: 69, weight: 9 },
+];
+
+console.log(selectBanners(banners, 3));
