@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "name": "Яблоки",
+            "weight": 1000,
+            "group": "Фрукты",
+            "price": 150,
+            "storage": 1
+        },
+        {
+            "name": "Картошка",
+            "weight": 5000,
+            "group": "Овощи",
+            "price": 320,
+            "storage": 2
+        }
+    ],
+    "people":[
+        {
+
+        }
+
+    ]
+}
+

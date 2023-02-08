@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<books>
+    <book>
+        <id>1</id>
+        <name>Камил</name>
+        <author>Малковски</author>
+        <pages>146</pages>
+        <date>2019</date>
+        <price>863</price>
+    </book>
+    <book>
+        <id>2</id>
+        <name>Вероятности</name>
+        <author>Самойленко</author>
+        <pages>134</pages>
+        <date>2022</date>
+        <price>1055</price>
+    </book>
+</books>
