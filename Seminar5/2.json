@@ -15,11 +15,36 @@
             "storage": 2
         }
     ],
-    "people":[
-        {
-
-        }
-
+    "people": [
+        {}
     ]
 }
 
+[
+    {
+        "firstname": "Иван",
+        "lastname": "Иванов",
+        "age": 37,
+        "hobbies": [
+            "fishing",
+            "hanting",
+            "football"
+        ],
+        "married": true,
+        "children": [
+            "мария",
+            "Николай"
+        ]
+    },
+    {
+        "firstname": "Ольга",
+        "lastname": "Фролова",
+        "age": 21,
+        "hobbies": [
+            "travelling",
+            "cross stitch"
+        ],
+        "married": false,
+        "children": []
+    }
+]
